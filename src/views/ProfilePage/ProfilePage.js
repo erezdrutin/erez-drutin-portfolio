@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -18,6 +19,7 @@ import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Skills from "components/Skills/skills.js";
 import Work from "components/Work/work.js";
+import Education from "components/Education/education.js";
 
 // Importing a dictionary of images from a consts file:
 import skills_images from "./SkillsConsts.js";
@@ -25,24 +27,10 @@ import skills_images from "./SkillsConsts.js";
 // Importing a dictionary of Work consts:
 import work_factory from "./WorkConsts.js";
 
-// Importing "work" images:
-// import wediggit_site from "assets/img/work/wediggit_site.png";
-// import wedigg_service from "assets/img/work/wedigg_service.png";
-// import twentyfortyeight_plus from "assets/img/work/2048+.png";
-// import floating_square from "assets/img/work/floating_square.png";
+// Importing a dictionary of Education consts:
+import education_factory from "./EducationConsts.js";
 
 import profile from "assets/img/faces/profile.png";
-
-import studio1 from "assets/img/examples/studio-1.jpg";
-// import studio2 from "assets/img/examples/studio-2.jpg";
-import studio3 from "assets/img/examples/studio-3.jpg";
-// import studio4 from "assets/img/examples/studio-4.jpg";
-// import studio5 from "assets/img/examples/studio-5.jpg";
-import work1 from "assets/img/examples/olu-eletu.jpg";
-import work2 from "assets/img/examples/clem-onojeghuo.jpg";
-// import work3 from "assets/img/examples/cynthia-del-rio.jpg";
-import work4 from "assets/img/examples/mariya-georgieva.jpg";
-// import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
@@ -56,8 +44,6 @@ export default function ProfilePage(props) {
     classes.imgRoundedCircle,
     classes.imgFluid
   );
-  // const imageSkillClasses = classNames(classes.imgRaised, classes.imgFluid);
-  const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
 
   return (
     <div>
@@ -89,18 +75,42 @@ export default function ProfilePage(props) {
                   <div className={classes.name}>
                     <h3 className={classes.title}>Erez Drutin</h3>
                     <h6>
-                      DevOps Engineer / Software Engineer / FullStack Engineer
+                      Software Engineer / DevOps Engineer / FullStack Engineer
                     </h6>
-                    <Button justIcon link className={classes.margin5}>
+                    <Button
+                      justIcon
+                      link
+                      className={classes.margin5}
+                      href="https://apps.apple.com/us/developer/erez-drutin/id912961642"
+                      target="_blank"
+                    >
                       <i className={"fab fa-app-store"} />
                     </Button>
-                    <Button justIcon link className={classes.margin5}>
+                    <Button
+                      justIcon
+                      link
+                      className={classes.margin5}
+                      href="https://github.com/erezdrutin"
+                      target="_blank"
+                    >
                       <i className={"fab fa-github"} />
                     </Button>
-                    <Button justIcon link className={classes.margin5}>
+                    <Button
+                      justIcon
+                      link
+                      className={classes.margin5}
+                      href="https://www.linkedin.com/in/erez-drutin-0099701aa/"
+                      target="_blank"
+                    >
                       <i className={"fab fa-linkedin"} />
                     </Button>
-                    <Button justIcon link className={classes.margin5}>
+                    <Button
+                      justIcon
+                      link
+                      className={classes.margin5}
+                      href="mailto:drutinerez3@gmail.com"
+                      target="_blank"
+                    >
                       <i className={"fas fa-envelope"} />
                     </Button>
                   </div>
@@ -110,11 +120,11 @@ export default function ProfilePage(props) {
             <div className={classes.description}>
               <p>
                 A passionate developer with a demonstrated history in the
-                `DevOps` and Software Engineering industry. Currently serving in
-                IDF as a DevOps Engineer, a position that allows me to explore a
-                variety of new fields and technologies, while also working in
-                Wediggit ltd as a Software Engineer, a position that allows me
-                to develop myself and expand my skills.
+                DevOps, FullStack and Software Engineering industry. Currently
+                serving in IDF as a DevOps Engineer, a position that allows me
+                to explore a variety of new fields and technologies, while also
+                working in Wediggit ltd as a Software Engineer, a position that
+                allows me to develop myself and expand my skills.
               </p>
             </div>
             <GridContainer justify="center">
@@ -142,37 +152,7 @@ export default function ProfilePage(props) {
                       tabButton: "Education",
                       tabIcon: SchoolIcon,
                       tabContent: (
-                        <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work4}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={studio3}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work2}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={studio1}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                        </GridContainer>
+                        <Education education_factory={education_factory} />
                       ),
                     },
                   ]}

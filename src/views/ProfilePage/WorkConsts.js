@@ -44,10 +44,10 @@ const work_factory = [
     img_href: "https://github.com/erezdrutin/SudokuSolver",
   },
   {
-    title: "Furniture Store",
+    title: "Furnitures Store",
     desc: "SQL, ERD, DSD, Access",
     img: furniture_store,
-    image_alt: "furniture store",
+    image_alt: "furnitures store",
     image_href: "https://github.com/erezdrutin/furniture-store",
   },
 ];
