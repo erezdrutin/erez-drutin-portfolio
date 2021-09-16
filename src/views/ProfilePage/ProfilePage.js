@@ -17,30 +17,19 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Skills from "components/Skills/skills.js";
+import Work from "components/Work/work.js";
 
-// Skills images:
-import js from "assets/img/technologies/js.png";
-import python from "assets/img/technologies/python.png";
-import mssql from "assets/img/technologies/mssql.png";
-import swift from "assets/img/technologies/swift.png";
-import c_sharp from "assets/img/technologies/c#.png";
-import c from "assets/img/technologies/c.png";
-import react from "assets/img/technologies/react.png";
-import elasticsearch from "assets/img/technologies/elasticsearch.png";
-import mongodb from "assets/img/technologies/mongodb.png";
-import redis from "assets/img/technologies/redis.png";
-import docker from "assets/img/technologies/docker.png";
-import openshift from "assets/img/technologies/openshift.png";
-import jenkins from "assets/img/technologies/jenkins.png";
-import rabbitmq from "assets/img/technologies/rabbitmq.png";
-import automic from "assets/img/technologies/automic.png";
-import bash from "assets/img/technologies/bash.png";
-import batch from "assets/img/technologies/batch.png";
-import powershell from "assets/img/technologies/powershell.png";
-import css3 from "assets/img/technologies/css3.png";
-import html5 from "assets/img/technologies/html5.png";
-import wordpress from "assets/img/technologies/wordpress.png";
-import git from "assets/img/technologies/git.png";
+// Importing a dictionary of images from a consts file:
+import skills_images from "./SkillsConsts.js";
+
+// Importing a dictionary of Work consts:
+import work_factory from "./WorkConsts.js";
+
+// Importing "work" images:
+// import wediggit_site from "assets/img/work/wediggit_site.png";
+// import wedigg_service from "assets/img/work/wedigg_service.png";
+// import twentyfortyeight_plus from "assets/img/work/2048+.png";
+// import floating_square from "assets/img/work/floating_square.png";
 
 import profile from "assets/img/faces/profile.png";
 
@@ -51,9 +40,9 @@ import studio3 from "assets/img/examples/studio-3.jpg";
 // import studio5 from "assets/img/examples/studio-5.jpg";
 import work1 from "assets/img/examples/olu-eletu.jpg";
 import work2 from "assets/img/examples/clem-onojeghuo.jpg";
-import work3 from "assets/img/examples/cynthia-del-rio.jpg";
+// import work3 from "assets/img/examples/cynthia-del-rio.jpg";
 import work4 from "assets/img/examples/mariya-georgieva.jpg";
-import work5 from "assets/img/examples/clem-onojegaw.jpg";
+// import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
@@ -69,30 +58,6 @@ export default function ProfilePage(props) {
   );
   // const imageSkillClasses = classNames(classes.imgRaised, classes.imgFluid);
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
-  const skills_images = {
-    Python: python,
-    JavaScript: js,
-    React: react,
-    "C#": c_sharp,
-    C: c,
-    Swift: swift,
-    Automic: automic,
-    Bash: bash,
-    Batch: batch,
-    PowerShell: powershell,
-    MSSQL: mssql,
-    "Elastic Stack": elasticsearch,
-    Mongo: mongodb,
-    Redis: redis,
-    Docker: docker,
-    OpenShift: openshift,
-    Jenkins: jenkins,
-    RabbitMQ: rabbitmq,
-    HTML: html5,
-    CSS: css3,
-    Git: git,
-    WordPress: wordpress,
-  };
 
   return (
     <div>
@@ -171,39 +136,7 @@ export default function ProfilePage(props) {
                     {
                       tabButton: "Work",
                       tabIcon: Palette,
-                      tabContent: (
-                        <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work2}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work3}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work4}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work5}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                        </GridContainer>
-                      ),
+                      tabContent: <Work work_factory={work_factory} />,
                     },
                     {
                       tabButton: "Education",

@@ -13,12 +13,16 @@ import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
 const useStyles = makeStyles(styles);
 
-export default function ProfilePage(props) {
+/**
+ * A functional component in charge of generating a "Skills" section for the Profile page.
+ * @param {*} props: Variables that the function receives and uses.
+ * @returns: A functional component.
+ */
+export default function Skills(props) {
   const { skills, images } = props;
-  console.log("AYOOO SKILL INNER: ", skills);
-  console.log("AYOOO IMAGES: ", images);
   const classes = useStyles();
   const imageSkillClasses = classNames(classes.imgRaised, classes.imgFluid);
+
   return (
     <>
       <GridContainer justify="center">
