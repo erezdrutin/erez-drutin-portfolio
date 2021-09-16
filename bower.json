@@ -1,0 +1,23 @@
+{
+  "name": "erez-drutin-portfolio",
+  "homepage": "https://github.com/erezdrutin/erez-drutin-portfolio",
+  "authors": [
+    "Erez Drutin"
+  ],
+  "description": "Erez Drutin's Portfolio",
+  "main": "dist/index.js",
+  "keywords": [
+    "erez",
+    "drutin",
+    "Erez Drutin"
+  ],
+  "license": "Erez Drutin License",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}
