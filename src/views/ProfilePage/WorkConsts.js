@@ -26,14 +26,14 @@ const work_factory = [
     title: "2048+",
     desc: "C#, .NET, Microsoft XNA, ML, ExpectiMax Algorithm",
     img: twentyfortyeight_plus,
-    image_alt: "2048+",
+    img_alt: "2048+",
     img_href: "https://github.com/erezdrutin/2048-Plus",
   },
   {
     title: "The Floating Square",
     desc: "Swift, GameKit, SpriteKit, Combine, AVFoundation",
     img: floating_square,
-    image_alt: "the floating square",
+    img_alt: "the floating square",
     img_href: "https://apps.apple.com/us/app/the-floating-square/id1507159644",
   },
   {
@@ -47,8 +47,8 @@ const work_factory = [
     title: "Furnitures Store",
     desc: "SQL, ERD, DSD, Access",
     img: furniture_store,
-    image_alt: "furnitures store",
-    image_href: "https://github.com/erezdrutin/furniture-store",
+    img_alt: "furnitures store",
+    img_href: "https://github.com/erezdrutin/furniture-store",
   },
 ];
 
